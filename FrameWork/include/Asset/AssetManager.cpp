@@ -1,5 +1,7 @@
 ﻿#include "AssetManager.h"
 
+#include "Mesh/MeshManager.h"
+
 CAssetManager::CAssetManager()
 {
 
@@ -7,11 +9,13 @@ CAssetManager::CAssetManager()
 
 CAssetManager::~CAssetManager()
 {
+	SAFE_DELETE(mMeshManager);
 }
 
 bool CAssetManager::Init()
 {
 	//메쉬를 관리 
+	mMeshManager = new CMeshManager;
 
 	//이미지 텍스쳐 
 

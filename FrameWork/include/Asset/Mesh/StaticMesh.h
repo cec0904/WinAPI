@@ -1,8 +1,8 @@
 ﻿#pragma once
 #include "Mesh.h"
-class StaticMesh : public CMesh
+class CStaticMesh : public CMesh
 {
 public:
-	StaticMesh();
-	~StaticMesh();
+	CStaticMesh();
+	~CStaticMesh();
 };

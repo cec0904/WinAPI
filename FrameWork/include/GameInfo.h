@@ -20,17 +20,19 @@
 
 
 #include <Windows.h>
-
+#include <string>
 #include <vector>	// 자료구조 리스트
 #include <map>	// 기본 트리
 #include <unordered_map>	// 해쉬트리
-
+#include <crtdbg.h>
 #include <list>	// 자료구조 리스트
 //using namespace std;
 
 // DX를 사용하기 위한 헤더
 #include <d3d11.h>
 #include <d3dcompiler.h>
+
+#include "Share/SharedPtr.h"
 
 /*
 	라이브러리를 가져와서 사용하는 방식이다.
@@ -46,6 +48,19 @@
 */
 
 #include "Vector2D.h"
+#include "Vector3D.h"
+#include "Vector4D.h"
+
+
+using namespace std;
+
+#define SAFE_DELETE(p) if(p) {delete[] p; p = nullptr;}
+#define SAFE_DELETE_ARRAY(p) if(p) {delete[] p; p = nullptr;}
+
+
+
+
+
 
 // RELEASE 매크로
 #define SAFE_RELEASE(p) if(p) {p->Release(); p = nullptr;}
@@ -96,4 +111,63 @@ struct FResolution
 {
 	unsigned int Width;
 	unsigned int Height;
+};
+
+// 정점 버퍼 vertex buffer
+struct FVertexBuffer
+{
+
+	// buffer는 사용했으면 항상 지워줘야 한다.
+	ID3D11Buffer* Buffer = nullptr;
+	int Size = 0;
+	int Count = 0;
+	void* Data = nullptr;
+
+	FVertexBuffer() = default;
+	~FVertexBuffer()
+	{
+		SAFE_RELEASE(Buffer);
+		SAFE_DELETE_ARRAY(Data);
+	}
+};
+
+// 인덱스 버퍼
+struct FIndexBuffer
+{
+	ID3D11Buffer* Buffer = nullptr;
+	int Size = 0;
+	int Count = 0;
+	DXGI_FORMAT Fmt = DXGI_FORMAT_UNKNOWN;
+	void* Data = nullptr;
+
+	FIndexBuffer() = default;
+	~FIndexBuffer()
+	{
+		SAFE_RELEASE(Buffer);
+		SAFE_DELETE_ARRAY(Data);
+	}
+};
+
+
+// 정점의 정보를 저장하는 구조체
+struct FVertexColor
+{
+	FVector3D Pos;
+	FVector4D Color;
+
+	FVertexColor()
+	{
+
+	}
+	FVertexColor(const FVector3D& _pos, const FVector4D& _Color)
+		: Pos(_pos), Color(_Color)
+	{
+
+	}
+	FVertexColor(float x, float y, float z, float r, float g, float b, float a)
+		: Pos(x, y, z),
+		Color(r, g, b, a)
+	{
+
+	}
 };
