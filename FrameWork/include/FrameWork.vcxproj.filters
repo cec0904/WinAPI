@@ -16,6 +16,24 @@
     <Filter Include="01.GameManager">
       <UniqueIdentifier>{22511b6e-4fb4-4741-b0cf-d5bae62d0905}</UniqueIdentifier>
     </Filter>
+    <Filter Include="02.Share">
+      <UniqueIdentifier>{fefc6042-5bca-4334-982f-187377dcb5fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.Share\01.Time">
+      <UniqueIdentifier>{fad77a76-bafe-4a5f-9f85-bf7ccc2495d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.GameManager\01.Device">
+      <UniqueIdentifier>{78b7b434-92cf-404c-82a0-d0238298fe8c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.Share\02.Object">
+      <UniqueIdentifier>{ab6a5f63-53f7-46ec-a657-68ba45b20668}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03.Asset">
+      <UniqueIdentifier>{a6192ae6-2183-4316-83bc-7f61ad80388e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03.Asset\Mesh">
+      <UniqueIdentifier>{04fa9831-cb37-4ff5-92d8-3a46f4400c84}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -24,8 +42,29 @@
     <ClCompile Include="GameManager.cpp">
       <Filter>01.GameManager</Filter>
     </ClCompile>
-    <ClCompile Include="GameInfo.h">
-      <Filter>헤더 파일</Filter>
+    <ClCompile Include="Share\Timer.cpp">
+      <Filter>02.Share\01.Time</Filter>
+    </ClCompile>
+    <ClCompile Include="Vector4D.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Device.cpp">
+      <Filter>01.GameManager\01.Device</Filter>
+    </ClCompile>
+    <ClCompile Include="Share\Object.cpp">
+      <Filter>02.Share\02.Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Asset\AssetManager.cpp">
+      <Filter>03.Asset</Filter>
+    </ClCompile>
+    <ClCompile Include="Asset\Asset.cpp">
+      <Filter>03.Asset</Filter>
+    </ClCompile>
+    <ClCompile Include="Asset\Mesh\Mesh.cpp">
+      <Filter>03.Asset\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="Asset\Mesh\StaticMesh.cpp">
+      <Filter>03.Asset\Mesh</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -34,6 +73,39 @@
     </ClInclude>
     <ClInclude Include="resource.h">
       <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Share\Timer.h">
+      <Filter>02.Share\01.Time</Filter>
+    </ClInclude>
+    <ClInclude Include="GameInfo.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector2D.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector3D.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector4D.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Device.h">
+      <Filter>01.GameManager\01.Device</Filter>
+    </ClInclude>
+    <ClInclude Include="Share\Object.h">
+      <Filter>02.Share\02.Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Asset\AssetManager.h">
+      <Filter>03.Asset</Filter>
+    </ClInclude>
+    <ClInclude Include="Asset\Asset.h">
+      <Filter>03.Asset</Filter>
+    </ClInclude>
+    <ClInclude Include="Asset\Mesh\Mesh.h">
+      <Filter>03.Asset\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="Asset\Mesh\StaticMesh.h">
+      <Filter>03.Asset\Mesh</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

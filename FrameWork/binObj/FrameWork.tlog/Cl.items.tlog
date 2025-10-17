@@ -1,3 +1,10 @@
-E:\SVN\Windows\FrameWork\FrameWork\include\GameInfo.h;E:\SVN\Windows\FrameWork\FrameWork\binObj\GameInfo.obj
+E:\SVN\Windows\FrameWork\FrameWork\include\Asset\Asset.cpp;E:\SVN\Windows\FrameWork\FrameWork\binObj\Asset.obj
+E:\SVN\Windows\FrameWork\FrameWork\include\Asset\AssetManager.cpp;E:\SVN\Windows\FrameWork\FrameWork\binObj\AssetManager.obj
+E:\SVN\Windows\FrameWork\FrameWork\include\Asset\Mesh\Mesh.cpp;E:\SVN\Windows\FrameWork\FrameWork\binObj\Mesh.obj
+E:\SVN\Windows\FrameWork\FrameWork\include\Asset\Mesh\StaticMesh.cpp;E:\SVN\Windows\FrameWork\FrameWork\binObj\StaticMesh.obj
+E:\SVN\Windows\FrameWork\FrameWork\include\Device.cpp;E:\SVN\Windows\FrameWork\FrameWork\binObj\Device.obj
 E:\SVN\Windows\FrameWork\FrameWork\include\GameManager.cpp;E:\SVN\Windows\FrameWork\FrameWork\binObj\GameManager.obj
 E:\SVN\Windows\FrameWork\FrameWork\include\main.cpp;E:\SVN\Windows\FrameWork\FrameWork\binObj\main.obj
+E:\SVN\Windows\FrameWork\FrameWork\include\Share\Object.cpp;E:\SVN\Windows\FrameWork\FrameWork\binObj\Object.obj
+E:\SVN\Windows\FrameWork\FrameWork\include\Share\Timer.cpp;E:\SVN\Windows\FrameWork\FrameWork\binObj\Timer.obj
+E:\SVN\Windows\FrameWork\FrameWork\include\Vector4D.cpp;E:\SVN\Windows\FrameWork\FrameWork\binObj\Vector4D.obj
