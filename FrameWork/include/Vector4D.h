@@ -1,4 +1,5 @@
 ﻿#pragma once
+#include "EngineMath.h"
 
 struct FVector4D
 {

@@ -1,7 +1,7 @@
 ﻿#pragma once
 #include "../Share/Object.h"
 
-class CAsset
+class CAsset abstract : public CObject
 {
 public:
 	CAsset();

@@ -2,6 +2,7 @@
 
 
 #include <math.h>
+#include "EngineMath.h"
 
 /*
 	2차원 방향 벡터 구조체를 만들 것이다.

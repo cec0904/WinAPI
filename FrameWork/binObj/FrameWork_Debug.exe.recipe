@@ -5,7 +5,11 @@
       <FullPath>E:\SVN\Windows\FrameWork\FrameWork\bin\FrameWork_Debug.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
-  <ContentFiles />
+  <ContentFiles>
+    <ContentFile>
+      <FullPath>E:\SVN\Windows\FrameWork\FrameWork\bin\ColorMesh.cso</FullPath>
+    </ContentFile>
+  </ContentFiles>
   <SatelliteDlls />
   <NonRecipeFileRefs />
 </Project>

@@ -76,6 +76,8 @@ bool CMesh::CreateBuffer(ID3D11Buffer** Buffer, D3D11_BIND_FLAG Flag, void* Data
     {
         BufferDesc.CPUAccessFlags = D3D11_CPU_ACCESS_WRITE | D3D11_CPU_ACCESS_READ;
     }
+    BufferDesc.BindFlags = Flag;
+    BufferDesc.Usage = Usage;
 
     // 버퍼 생성
     D3D11_SUBRESOURCE_DATA BufferData = {};
@@ -88,4 +90,38 @@ bool CMesh::CreateBuffer(ID3D11Buffer** Buffer, D3D11_BIND_FLAG Flag, void* Data
 
 
     return true;
+}
+
+void CMesh::Render()
+{
+
+    // 그려줄 도형 타입을 지정해준다. 
+    CDevice::GetInst()->GetContext()->IASetPrimitiveTopology(mPrimitive);
+
+    //버텍스 버퍼 셋팅 해준다. 
+    UINT stride = mVertexBuffer.Size;
+    UINT Offset = 0;
+    CDevice::GetInst()->GetContext()->IASetVertexBuffers(0, 1, &mVertexBuffer.Buffer, &stride, &Offset);
+
+    //인덱스 버퍼 유무 판단 
+    size_t SlotSize = mMeshSlot.size();
+
+    if (SlotSize > 0)
+    {
+        for (size_t i = 0; i < SlotSize; ++i)
+        {
+            CDevice::GetInst()->GetContext()->IASetIndexBuffer(mMeshSlot[i]->IndexBuffer.Buffer, mMeshSlot[i]->IndexBuffer.Fmt, 0);
+
+            //인덱스 참고하여 화면에 도형을 그린다. 
+            // 인덱스 갯수, 인덱스 위치, 버텍스의 시작 위치 
+            CDevice::GetInst()->GetContext()->DrawIndexed(mMeshSlot[i]->IndexBuffer.Count, 0, 0);
+        }
+    }
+    else
+    {
+        // 인덱스 버퍼가 없으므로 그냥 그려줄것이다. 
+        CDevice::GetInst()->GetContext()->IASetIndexBuffer(nullptr, DXGI_FORMAT_UNKNOWN, 0);
+        //정점만 출력해라!
+        CDevice::GetInst()->GetContext()->Draw(mVertexBuffer.Count, 0);
+    }
 }

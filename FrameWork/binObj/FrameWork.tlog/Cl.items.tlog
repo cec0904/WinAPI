@@ -6,7 +6,14 @@ E:\SVN\Windows\FrameWork\FrameWork\include\Asset\Mesh\StaticMesh.cpp;E:\SVN\Wind
 E:\SVN\Windows\FrameWork\FrameWork\include\Device.cpp;E:\SVN\Windows\FrameWork\FrameWork\binObj\Device.obj
 E:\SVN\Windows\FrameWork\FrameWork\include\GameManager.cpp;E:\SVN\Windows\FrameWork\FrameWork\binObj\GameManager.obj
 E:\SVN\Windows\FrameWork\FrameWork\include\main.cpp;E:\SVN\Windows\FrameWork\FrameWork\binObj\main.obj
+E:\SVN\Windows\FrameWork\FrameWork\include\Shader\ColorMeshShader.cpp;E:\SVN\Windows\FrameWork\FrameWork\binObj\ColorMeshShader.obj
+E:\SVN\Windows\FrameWork\FrameWork\include\Shader\ComputeShader.cpp;E:\SVN\Windows\FrameWork\FrameWork\binObj\ComputeShader.obj
+E:\SVN\Windows\FrameWork\FrameWork\include\Shader\ConstantBuffer.cpp;E:\SVN\Windows\FrameWork\FrameWork\binObj\ConstantBuffer.obj
+E:\SVN\Windows\FrameWork\FrameWork\include\Shader\ConstantBufferData.cpp;E:\SVN\Windows\FrameWork\FrameWork\binObj\ConstantBufferData.obj
+E:\SVN\Windows\FrameWork\FrameWork\include\Shader\GraphicShader.cpp;E:\SVN\Windows\FrameWork\FrameWork\binObj\GraphicShader.obj
+E:\SVN\Windows\FrameWork\FrameWork\include\Shader\Shader.cpp;E:\SVN\Windows\FrameWork\FrameWork\binObj\Shader.obj
+E:\SVN\Windows\FrameWork\FrameWork\include\Shader\ShaderManager.cpp;E:\SVN\Windows\FrameWork\FrameWork\binObj\ShaderManager.obj
+E:\SVN\Windows\FrameWork\FrameWork\include\Shader\TransformCBuffer.cpp;E:\SVN\Windows\FrameWork\FrameWork\binObj\TransformCBuffer.obj
 E:\SVN\Windows\FrameWork\FrameWork\include\Share\Object.cpp;E:\SVN\Windows\FrameWork\FrameWork\binObj\Object.obj
-E:\SVN\Windows\FrameWork\FrameWork\include\Share\SharedPtr.cpp;E:\SVN\Windows\FrameWork\FrameWork\binObj\SharedPtr.obj
 E:\SVN\Windows\FrameWork\FrameWork\include\Share\Timer.cpp;E:\SVN\Windows\FrameWork\FrameWork\binObj\Timer.obj
 E:\SVN\Windows\FrameWork\FrameWork\include\Vector4D.cpp;E:\SVN\Windows\FrameWork\FrameWork\binObj\Vector4D.obj

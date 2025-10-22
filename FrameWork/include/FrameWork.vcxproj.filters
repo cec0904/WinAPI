@@ -37,6 +37,21 @@
     <Filter Include="02.Share\03.SharedPtr">
       <UniqueIdentifier>{4dcb202a-bdf9-45b0-ae3e-8b8a3af7fcf1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="04.Shader">
+      <UniqueIdentifier>{bbd20f8f-70f9-4d85-b5ca-21a004d6e681}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04.Shader\01.HLSL">
+      <UniqueIdentifier>{812cd551-49b9-4b56-b629-e885baec1bff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04.Shader\02.Shader Class">
+      <UniqueIdentifier>{0f0f336a-3972-4f5e-9bbb-f4129609fab0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04.Shader\03.ConstantBuffer">
+      <UniqueIdentifier>{e3c012bc-85fb-40e1-9831-5d1544a9f41d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04.Shader\03.ConstantBuffer\01.Transform">
+      <UniqueIdentifier>{afb6d9a2-5c78-4866-a803-c8003a1475b0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -74,6 +89,30 @@
     </ClCompile>
     <ClCompile Include="Share\SharedPtr.cpp">
       <Filter>02.Share\03.SharedPtr</Filter>
+    </ClCompile>
+    <ClCompile Include="Shader\ShaderManager.cpp">
+      <Filter>04.Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="Shader\ColorMeshShader.cpp">
+      <Filter>04.Shader\02.Shader Class</Filter>
+    </ClCompile>
+    <ClCompile Include="Shader\ComputeShader.cpp">
+      <Filter>04.Shader\02.Shader Class</Filter>
+    </ClCompile>
+    <ClCompile Include="Shader\GraphicShader.cpp">
+      <Filter>04.Shader\02.Shader Class</Filter>
+    </ClCompile>
+    <ClCompile Include="Shader\Shader.cpp">
+      <Filter>04.Shader\02.Shader Class</Filter>
+    </ClCompile>
+    <ClCompile Include="Shader\ConstantBuffer.cpp">
+      <Filter>04.Shader\03.ConstantBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="Shader\ConstantBufferData.cpp">
+      <Filter>04.Shader\03.ConstantBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="Shader\TransformCBuffer.cpp">
+      <Filter>04.Shader\03.ConstantBuffer\01.Transform</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -122,6 +161,39 @@
     <ClInclude Include="Share\SharedPtr.h">
       <Filter>02.Share\03.SharedPtr</Filter>
     </ClInclude>
+    <ClInclude Include="EngineMath.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader\ShaderManager.h">
+      <Filter>04.Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader\ColorMeshShader.h">
+      <Filter>04.Shader\02.Shader Class</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader\ComputeShader.h">
+      <Filter>04.Shader\02.Shader Class</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader\GraphicShader.h">
+      <Filter>04.Shader\02.Shader Class</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader\Shader.h">
+      <Filter>04.Shader\02.Shader Class</Filter>
+    </ClInclude>
+    <ClInclude Include="Matrix.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader\ConstantBuffer.h">
+      <Filter>04.Shader\03.ConstantBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader\BufferContainer.h">
+      <Filter>04.Shader\03.ConstantBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader\ConstantBufferData.h">
+      <Filter>04.Shader\03.ConstantBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader\TransformCBuffer.h">
+      <Filter>04.Shader\03.ConstantBuffer\01.Transform</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="FrameWork.rc">
@@ -132,5 +204,16 @@
     <Image Include="icon1.ico">
       <Filter>리소스 파일</Filter>
     </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="..\bin\Shader\Share.fx">
+      <Filter>04.Shader\01.HLSL</Filter>
+    </FxCompile>
+    <FxCompile Include="..\bin\Shader\ColorMesh.fx">
+      <Filter>04.Shader\01.HLSL</Filter>
+    </FxCompile>
   </ItemGroup>
 </Project>

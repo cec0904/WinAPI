@@ -17,4 +17,8 @@ void CObject::AddRef()
 void CObject::Release()
 {
 	mRefCount--;
+	if (mRefCount == 0)
+	{
+		delete this;
+	}
 }

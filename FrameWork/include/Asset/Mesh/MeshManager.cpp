@@ -92,14 +92,14 @@ bool CMeshManager::CreateMesh(const string& Name, void* VertexData, int Size, in
 		return false;
 	}
 
-	mMeshMap.insert(make_pair(Name, CSharedPtr((CObject*)Mesh)));
+	mMeshMap.insert(make_pair(Name, CSharedPtr<CMesh>(Mesh)));
 
 	return true;
 }
 
 CMesh* CMeshManager::FindMesh(const string& Name)
 {
-	unordered_map<string, CSharedPtr>::iterator iter = mMeshMap.find(Name);
+	unordered_map<string, CSharedPtr<CMesh>>::iterator iter = mMeshMap.find(Name);
 
 	if (iter == mMeshMap.end())
 	{

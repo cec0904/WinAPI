@@ -1,6 +1,7 @@
 ﻿#pragma once
 
 #include <math.h>
+#include "EngineMath.h"
 
 struct FVector3D
 {
