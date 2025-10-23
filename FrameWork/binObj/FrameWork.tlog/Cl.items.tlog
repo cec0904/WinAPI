@@ -3,9 +3,14 @@ E:\SVN\Windows\FrameWork\FrameWork\include\Asset\AssetManager.cpp;E:\SVN\Windows
 E:\SVN\Windows\FrameWork\FrameWork\include\Asset\Mesh\Mesh.cpp;E:\SVN\Windows\FrameWork\FrameWork\binObj\Mesh.obj
 E:\SVN\Windows\FrameWork\FrameWork\include\Asset\Mesh\MeshManager.cpp;E:\SVN\Windows\FrameWork\FrameWork\binObj\MeshManager.obj
 E:\SVN\Windows\FrameWork\FrameWork\include\Asset\Mesh\StaticMesh.cpp;E:\SVN\Windows\FrameWork\FrameWork\binObj\StaticMesh.obj
+E:\SVN\Windows\FrameWork\FrameWork\include\Component\Component.cpp;E:\SVN\Windows\FrameWork\FrameWork\binObj\Component.obj
 E:\SVN\Windows\FrameWork\FrameWork\include\Device.cpp;E:\SVN\Windows\FrameWork\FrameWork\binObj\Device.obj
 E:\SVN\Windows\FrameWork\FrameWork\include\GameManager.cpp;E:\SVN\Windows\FrameWork\FrameWork\binObj\GameManager.obj
 E:\SVN\Windows\FrameWork\FrameWork\include\main.cpp;E:\SVN\Windows\FrameWork\FrameWork\binObj\main.obj
+E:\SVN\Windows\FrameWork\FrameWork\include\Object\SceneObject.cpp;E:\SVN\Windows\FrameWork\FrameWork\binObj\SceneObject.obj
+E:\SVN\Windows\FrameWork\FrameWork\include\SceneComponent.cpp;E:\SVN\Windows\FrameWork\FrameWork\binObj\SceneComponent.obj
+E:\SVN\Windows\FrameWork\FrameWork\include\Scene\Scene.cpp;E:\SVN\Windows\FrameWork\FrameWork\binObj\Scene.obj
+E:\SVN\Windows\FrameWork\FrameWork\include\Scene\SceneMain.cpp;E:\SVN\Windows\FrameWork\FrameWork\binObj\SceneMain.obj
 E:\SVN\Windows\FrameWork\FrameWork\include\Shader\ColorMeshShader.cpp;E:\SVN\Windows\FrameWork\FrameWork\binObj\ColorMeshShader.obj
 E:\SVN\Windows\FrameWork\FrameWork\include\Shader\ComputeShader.cpp;E:\SVN\Windows\FrameWork\FrameWork\binObj\ComputeShader.obj
 E:\SVN\Windows\FrameWork\FrameWork\include\Shader\ConstantBuffer.cpp;E:\SVN\Windows\FrameWork\FrameWork\binObj\ConstantBuffer.obj
@@ -16,4 +21,5 @@ E:\SVN\Windows\FrameWork\FrameWork\include\Shader\ShaderManager.cpp;E:\SVN\Windo
 E:\SVN\Windows\FrameWork\FrameWork\include\Shader\TransformCBuffer.cpp;E:\SVN\Windows\FrameWork\FrameWork\binObj\TransformCBuffer.obj
 E:\SVN\Windows\FrameWork\FrameWork\include\Share\Object.cpp;E:\SVN\Windows\FrameWork\FrameWork\binObj\Object.obj
 E:\SVN\Windows\FrameWork\FrameWork\include\Share\Timer.cpp;E:\SVN\Windows\FrameWork\FrameWork\binObj\Timer.obj
+E:\SVN\Windows\FrameWork\FrameWork\include\Vector3D.cpp;E:\SVN\Windows\FrameWork\FrameWork\binObj\Vector3D.obj
 E:\SVN\Windows\FrameWork\FrameWork\include\Vector4D.cpp;E:\SVN\Windows\FrameWork\FrameWork\binObj\Vector4D.obj

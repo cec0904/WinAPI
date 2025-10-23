@@ -14,29 +14,29 @@ private:
 
 	
 
-	//사각형 하나 띄어보기 
-	//FRects mRC = { 100, 100, 200, 200 };
+	////사각형 하나 띄어보기 
+	////FRects mRC = { 100, 100, 200, 200 };
 
-	// 플레이어 위치
-	FVector2D mPlayerPos = { 150.f, 150.f };
-	// 플레이어 크기
-	FVector2D mPlayerSize = { 100.f, 100.f };
+	//// 플레이어 위치
+	//FVector2D mPlayerPos = { 150.f, 150.f };
+	//// 플레이어 크기
+	//FVector2D mPlayerSize = { 100.f, 100.f };
 
-	std::list<FBullet> mBulletList;	// 여기에 총알을 넣어줄 것이다.
+	//std::list<FBullet> mBulletList;	// 여기에 총알을 넣어줄 것이다.
 
-	// 적
-	/*FRects mEnemy = { 1000, 500, 1100, 600 };
-	std::list<FRects> mEnemyBulletList;
-	float mFireTime = 1.f;
-	float mFireAccTime = 0.f;
-	FVector2D FireDir;*/
+	//// 적
+	///*FRects mEnemy = { 1000, 500, 1100, 600 };
+	//std::list<FRects> mEnemyBulletList;
+	//float mFireTime = 1.f;
+	//float mFireAccTime = 0.f;
+	//FVector2D FireDir;*/
 
-	FVector2D mEnemyPos = { 1000.f, 300.f };
-	FVector2D mEnemySize = { 100.f, 100.f };
-	float mEnemyDir = 1.f;
-	std::list<FBullet> mEnemyBulletList;
-	float mFireTime = 1.f;
-	float mFireAccTime = 0.f;
+	//FVector2D mEnemyPos = { 1000.f, 300.f };
+	//FVector2D mEnemySize = { 100.f, 100.f };
+	//float mEnemyDir = 1.f;
+	//std::list<FBullet> mEnemyBulletList;
+	//float mFireTime = 1.f;
+	//float mFireAccTime = 0.f;
 
 	//배경색 
 	//처음 하시는 분들은 검정이 아닌 다른색으로 하는것을 추천드립니다. 

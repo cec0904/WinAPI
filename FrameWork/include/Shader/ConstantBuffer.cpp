@@ -42,6 +42,13 @@ bool CConstantBuffer::Init(int Size, int Register, int ShaderBufferType)
 //상수버퍼에 들어갈 데이터 정보가 들어올것이다. 
 void CConstantBuffer::Update(void* Data)
 {
+	assert(this != nullptr);
+	if (!mBuffer || !Data) return;
+
+	auto ctx = CDevice::GetInst() ? CDevice::GetInst()->GetContext() : nullptr;
+	if (!ctx) return;
+
+
 	// Buffer 안에 있는 데이터를 저장하기위한 주소를 가져온다. 
 	D3D11_MAPPED_SUBRESOURCE Map = {};
 	//Map : CPU가 GPU를 사용하기 위해서 잠금처리하는것이다. 

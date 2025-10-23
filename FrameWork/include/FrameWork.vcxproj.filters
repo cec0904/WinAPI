@@ -52,6 +52,18 @@
     <Filter Include="04.Shader\03.ConstantBuffer\01.Transform">
       <UniqueIdentifier>{afb6d9a2-5c78-4866-a803-c8003a1475b0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="05.Scene">
+      <UniqueIdentifier>{a1ed9edf-fadc-4570-b54f-7f9e17eb35b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="06.Object">
+      <UniqueIdentifier>{eb12ea3c-89f1-462f-9126-4b47f3405e96}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="07.Component">
+      <UniqueIdentifier>{388d1adf-fad5-4561-8a7d-4287fa14efc0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="07.Component\01.SceneComponent">
+      <UniqueIdentifier>{ae36a396-1063-44b5-bcfc-418c1dbe5a82}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -113,6 +125,33 @@
     </ClCompile>
     <ClCompile Include="Shader\TransformCBuffer.cpp">
       <Filter>04.Shader\03.ConstantBuffer\01.Transform</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene\Scene.cpp">
+      <Filter>05.Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Component\Component.cpp">
+      <Filter>07.Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene\SceneMain.cpp">
+      <Filter>05.Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Object\SceneObject.cpp">
+      <Filter>06.Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Vector3D.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Component\MeshComponent.cpp">
+      <Filter>07.Component\01.SceneComponent</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneComponent.cpp">
+      <Filter>07.Component\01.SceneComponent</Filter>
+    </ClCompile>
+    <ClCompile Include="Component\StaticMeshComponent.cpp">
+      <Filter>07.Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene\SceneManager.cpp">
+      <Filter>05.Scene</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -193,6 +232,30 @@
     </ClInclude>
     <ClInclude Include="Shader\TransformCBuffer.h">
       <Filter>04.Shader\03.ConstantBuffer\01.Transform</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene\Scene.h">
+      <Filter>05.Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Component\Component.h">
+      <Filter>07.Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene\SceneMain.h">
+      <Filter>05.Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Object\SceneObject.h">
+      <Filter>06.Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Component\MeshComponent.h">
+      <Filter>07.Component\01.SceneComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneComponent.h">
+      <Filter>07.Component\01.SceneComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="Component\StaticMeshComponent.h">
+      <Filter>07.Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene\SceneManager.h">
+      <Filter>05.Scene</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

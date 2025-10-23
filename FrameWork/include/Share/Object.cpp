@@ -22,3 +22,8 @@ void CObject::Release()
 		delete this;
 	}
 }
+
+void CObject::Destroy()
+{
+	mActive = false;
+}

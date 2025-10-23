@@ -14,6 +14,9 @@
 
 // 4차원 행렬을 이용할 것이다
 #include "Vector4D.h"
+#include "Vector3D.h"
+#include "Vector2D.h"
+#include "string.h"
 
 // DX 에서는 행렬을 지원 안해주냐? 해주고있어요 다만 사용이 까다롭다. 
 // __declspec(align(16)) : DX 에서 지원하는 수학 라이브러에서 행렬 연산할때 이거 없으면 크래쉬남.
@@ -199,14 +202,14 @@ __declspec(align(16)) union  FMatrix
 	{
 		float y = DirectX::XMConvertToRadians(_y);
 
-		m = DirectX::XMMatrixRotationX(y);
+		m = DirectX::XMMatrixRotationY(y);
 	}
 
 	void RotationZ(float _z)
 	{
 		float z = DirectX::XMConvertToRadians(_z);
 
-		m = DirectX::XMMatrixRotationX(z);
+		m = DirectX::XMMatrixRotationZ(z);
 	}
 
 	//축회전 
@@ -259,6 +262,120 @@ __declspec(align(16)) union  FMatrix
 	{
 		DirectX::XMVECTOR det = DirectX::XMMatrixDeterminant(_m.m);
 		return DirectX::XMMatrixInverse(&det, _m.m);
+	}
+
+	//////// 실습 
+	// 월드 행렬 구하는 함수들 Static 으로 만들어보기 
+		//크기 행렬 
+
+
+	static FMatrix StaticScaling(const FVector3D& _v)
+	{
+		return DirectX::XMMatrixScaling(_v.x, _v.y, _v.z);
+	}
+
+	static FMatrix StaticScaling(float x, float y, float z)
+	{
+		return DirectX::XMMatrixScaling(x, y, z);
+	}
+
+	static FMatrix StaticScaling(const FVector2D& _v)
+	{
+		return DirectX::XMMatrixScaling(_v.x, _v.y, 1.f);
+	}
+
+	static FMatrix StaticScaling(float x, float y)
+	{
+		return DirectX::XMMatrixScaling(x, y, 1.f);
+	}
+
+	//우리가 사용할때는 디그리 사용할거고 
+	static FMatrix StaticRotation(const FVector3D& _v)
+	{
+		//행렬 만들때는 라디안을 사용한다. 
+		float x = DirectX::XMConvertToRadians(_v.x);
+		float y = DirectX::XMConvertToRadians(_v.y);
+		float z = DirectX::XMConvertToRadians(_v.z);
+
+		//라디안으로 변환 후 
+		//x, y, z, 회전값을 이용하여 사원수를 만들어야 한다. 
+		// roll : x축 회전
+		// yaw : y축 회전 
+		// pitch : z축 회전
+		DirectX::XMVECTOR Quat = DirectX::XMQuaternionRotationRollPitchYaw(x, y, z);
+
+		// 위에서 구해준 사원수를 이용해서 회전행렬을 만들어준다. 
+		return DirectX::XMMatrixRotationQuaternion(Quat);
+	}
+
+	static FMatrix StaticRotation(float _x, float _y, float _z)
+	{
+		//행렬 만들때는 라디안을 사용한다. 
+		float x = DirectX::XMConvertToRadians(_x);
+		float y = DirectX::XMConvertToRadians(_y);
+		float z = DirectX::XMConvertToRadians(_z);
+
+		//라디안으로 변환 후 
+		//x, y, z, 회전값을 이용하여 사원수를 만들어야 한다. 
+		// roll : x축 회전
+		// yaw : y축 회전 
+		// pitch : z축 회전
+		DirectX::XMVECTOR Quat = DirectX::XMQuaternionRotationRollPitchYaw(x, y, z);
+
+		// 위에서 구해준 사원수를 이용해서 회전행렬을 만들어준다. 
+		return DirectX::XMMatrixRotationQuaternion(Quat);
+	}
+
+	static FMatrix StaticRotationX(float _x)
+	{
+		float x = DirectX::XMConvertToRadians(_x);
+
+		return DirectX::XMMatrixRotationX(x);
+	}
+	static FMatrix StaticRotationY(float _y)
+	{
+		float y = DirectX::XMConvertToRadians(_y);
+
+		return DirectX::XMMatrixRotationY(y);
+	}
+
+	static FMatrix StaticRotationZ(float _z)
+	{
+		float z = DirectX::XMConvertToRadians(_z);
+
+		return DirectX::XMMatrixRotationZ(z);
+	}
+
+	//축회전 
+	static FMatrix StaticRotationAxis(const FVector3D& Axis, float Angle)
+	{
+		float angle = DirectX::XMConvertToRadians(Angle);
+		//기준축 만들어주기 
+		DirectX::XMVECTOR _Axis = DirectX::XMLoadFloat3((DirectX::XMFLOAT3*)&Axis);
+
+		//해당 축으로 몇도 회전하는 회전행렬을 만들어 준다!
+		return DirectX::XMMatrixRotationAxis(_Axis, angle);
+	}
+
+	// 이동 행렬
+	static FMatrix StaticTranslation(const FVector3D& _v)
+	{
+		return DirectX::XMMatrixTranslation(_v.x, _v.y, _v.z);
+	}
+
+	static FMatrix StaticTranslation(float x, float y, float z)
+	{
+		return DirectX::XMMatrixTranslation(x, y, z);
+	}
+
+	static FMatrix StaticTranslation(const FVector2D& _v)
+	{
+		return DirectX::XMMatrixTranslation(_v.x, _v.y, 0);
+	}
+
+	static FMatrix StaticTranslation(float x, float y)
+	{
+		return DirectX::XMMatrixTranslation(x, y, 0);
 	}
 };
 
