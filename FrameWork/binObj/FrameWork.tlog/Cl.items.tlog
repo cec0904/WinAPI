@@ -4,13 +4,17 @@ E:\SVN\Windows\FrameWork\FrameWork\include\Asset\Mesh\Mesh.cpp;E:\SVN\Windows\Fr
 E:\SVN\Windows\FrameWork\FrameWork\include\Asset\Mesh\MeshManager.cpp;E:\SVN\Windows\FrameWork\FrameWork\binObj\MeshManager.obj
 E:\SVN\Windows\FrameWork\FrameWork\include\Asset\Mesh\StaticMesh.cpp;E:\SVN\Windows\FrameWork\FrameWork\binObj\StaticMesh.obj
 E:\SVN\Windows\FrameWork\FrameWork\include\Component\Component.cpp;E:\SVN\Windows\FrameWork\FrameWork\binObj\Component.obj
+E:\SVN\Windows\FrameWork\FrameWork\include\Component\MeshComponent.cpp;E:\SVN\Windows\FrameWork\FrameWork\binObj\MeshComponent.obj
+E:\SVN\Windows\FrameWork\FrameWork\include\Component\StaticMeshComponent.cpp;E:\SVN\Windows\FrameWork\FrameWork\binObj\StaticMeshComponent.obj
 E:\SVN\Windows\FrameWork\FrameWork\include\Device.cpp;E:\SVN\Windows\FrameWork\FrameWork\binObj\Device.obj
 E:\SVN\Windows\FrameWork\FrameWork\include\GameManager.cpp;E:\SVN\Windows\FrameWork\FrameWork\binObj\GameManager.obj
 E:\SVN\Windows\FrameWork\FrameWork\include\main.cpp;E:\SVN\Windows\FrameWork\FrameWork\binObj\main.obj
 E:\SVN\Windows\FrameWork\FrameWork\include\Object\SceneObject.cpp;E:\SVN\Windows\FrameWork\FrameWork\binObj\SceneObject.obj
 E:\SVN\Windows\FrameWork\FrameWork\include\SceneComponent.cpp;E:\SVN\Windows\FrameWork\FrameWork\binObj\SceneComponent.obj
+E:\SVN\Windows\FrameWork\FrameWork\include\Scene\Input\Input.cpp;E:\SVN\Windows\FrameWork\FrameWork\binObj\Input.obj
 E:\SVN\Windows\FrameWork\FrameWork\include\Scene\Scene.cpp;E:\SVN\Windows\FrameWork\FrameWork\binObj\Scene.obj
 E:\SVN\Windows\FrameWork\FrameWork\include\Scene\SceneMain.cpp;E:\SVN\Windows\FrameWork\FrameWork\binObj\SceneMain.obj
+E:\SVN\Windows\FrameWork\FrameWork\include\Scene\SceneManager.cpp;E:\SVN\Windows\FrameWork\FrameWork\binObj\SceneManager.obj
 E:\SVN\Windows\FrameWork\FrameWork\include\Shader\ColorMeshShader.cpp;E:\SVN\Windows\FrameWork\FrameWork\binObj\ColorMeshShader.obj
 E:\SVN\Windows\FrameWork\FrameWork\include\Shader\ComputeShader.cpp;E:\SVN\Windows\FrameWork\FrameWork\binObj\ComputeShader.obj
 E:\SVN\Windows\FrameWork\FrameWork\include\Shader\ConstantBuffer.cpp;E:\SVN\Windows\FrameWork\FrameWork\binObj\ConstantBuffer.obj

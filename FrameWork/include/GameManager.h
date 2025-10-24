@@ -45,6 +45,18 @@ private:
 	
 
 public:
+	HINSTANCE GetWindowInstance() const
+	{
+		return mhInst;
+	}
+	
+	HWND GetWindowHandle()
+	{
+		return mhWnd;
+	}
+
+
+public:
 	bool Init(HINSTANCE hInst);
 	int Run();
 

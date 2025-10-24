@@ -143,8 +143,10 @@
     <ClCompile Include="Device.cpp" />
     <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Object\PlayerObject.cpp" />
     <ClCompile Include="Object\SceneObject.cpp" />
     <ClCompile Include="SceneComponent.cpp" />
+    <ClCompile Include="Scene\Input\Input.cpp" />
     <ClCompile Include="Scene\Scene.cpp" />
     <ClCompile Include="Scene\SceneMain.cpp" />
     <ClCompile Include="Scene\SceneManager.cpp" />
@@ -179,9 +181,11 @@
     <ClInclude Include="GameInfo.h" />
     <ClInclude Include="GameManager.h" />
     <ClInclude Include="Matrix.h" />
+    <ClInclude Include="Object\PlayerObject.h" />
     <ClInclude Include="Object\SceneObject.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="SceneComponent.h" />
+    <ClInclude Include="Scene\Input\Input.h" />
     <ClInclude Include="Scene\Scene.h" />
     <ClInclude Include="Scene\SceneMain.h" />
     <ClInclude Include="Scene\SceneManager.h" />

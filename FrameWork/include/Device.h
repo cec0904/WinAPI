@@ -31,6 +31,9 @@ class CDevice
 	// 윈도우의 클라이언트영역이랑은 해상도가 다를 수 있다.
 	FResolution mRs;
 
+	// 창모두 여부
+	bool mWindowMode = true;
+
 	// 화면에 그려질 녀석
 	ID3D11RenderTargetView* mTargetView = nullptr;
 
@@ -59,6 +62,11 @@ public:
 	const FResolution& GetResolution() const
 	{
 		return mRs;
+	}
+
+	bool GetWindowMod() const
+	{
+		return mWindowMode;
 	}
 
 public:

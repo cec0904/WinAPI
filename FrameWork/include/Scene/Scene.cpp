@@ -7,10 +7,18 @@ CScene::CScene()
 
 CScene::~CScene()
 {
+	SAFE_DELETE(mInput);
 }
 
 bool CScene::Init()
 {
+	mInput = new CInput;
+	if (!mInput->Init())
+	{
+		SAFE_DELETE(mInput);
+		return false;
+	}
+
 	return true;
 }
 
@@ -19,10 +27,14 @@ bool CScene::Init(const char* FileName)
 	return true;
 }
 
+void CScene::Input(float DeltaTime)
+{
+}
+
 void CScene::PreUpdate(float DeltaTime)
 {
-	std::list<CSharedPtr<CSceneObject>>::iterator iter;
-	std::list<CSharedPtr<CSceneObject>>::iterator iterEnd;
+	list<CSharedPtr<CSceneObject>>::iterator iter;
+	list<CSharedPtr<CSceneObject>>::iterator iterEnd;
 
 	for (iter = mObjList.begin(); iter != iterEnd;)
 	{
@@ -45,8 +57,8 @@ void CScene::PreUpdate(float DeltaTime)
 
 void CScene::Update(float DeltaTime)
 {
-	std::list<CSharedPtr<CSceneObject>>::iterator iter;
-	std::list<CSharedPtr<CSceneObject>>::iterator iterEnd;
+	list<CSharedPtr<CSceneObject>>::iterator iter;
+	list<CSharedPtr<CSceneObject>>::iterator iterEnd;
 
 	for (iter = mObjList.begin(); iter != iterEnd;)
 	{
@@ -91,7 +103,7 @@ void CScene::PostUpdate(float DeltaTime)
 	}
 }
 
-void CScene::Collsion(float DeltaTime)
+void CScene::Collision(float DeltaTime)
 {
 	std::list<CSharedPtr<CSceneObject>>::iterator iter;
 	std::list<CSharedPtr<CSceneObject>>::iterator iterEnd;
@@ -110,7 +122,7 @@ void CScene::Collsion(float DeltaTime)
 			continue;
 		}
 
-		(*iter)->Collsion(DeltaTime);
+		(*iter)->Collision(DeltaTime);
 		++iter;
 	}
 }

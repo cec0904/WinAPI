@@ -22,7 +22,7 @@ public:
 	virtual void PreUpdate(float DeltaTime);
 	virtual void Update(float DeltaTime);
 	virtual void PostUpdate(float DeltaTime);
-	virtual void Collsion(float DeltaTime);
+	virtual void Collision(float DeltaTime);
 	virtual void PreRender();
 	virtual void Render();
 	virtual void PostRender();

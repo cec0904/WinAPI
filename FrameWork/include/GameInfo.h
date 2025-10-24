@@ -27,6 +27,7 @@
 #include <crtdbg.h>
 #include <list>	// 자료구조 리스트
 //using namespace std;
+#include <functional>
 
 // DX를 사용하기 위한 헤더
 #include <d3d11.h>

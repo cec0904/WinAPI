@@ -103,9 +103,7 @@ void CGameManager::Logic()
     Render(DeltaTime);
 }
 
-void CGameManager::Input(float DeltaTime)
-{
-}
+
 
 void CGameManager::Update(float DeltaTime)
 {
@@ -133,7 +131,8 @@ void CGameManager::Render(float DeltaTime)
 
     // 준비된 도화지에 출력
     static CTransformCBuffer buffer;
-    static FVector3D Pos, Rot;
+    static FVector3D Pos;
+    static FVector3D Rot;
 
     Pos.z = 5.f;
 

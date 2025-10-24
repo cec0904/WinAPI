@@ -35,7 +35,7 @@ void CComponent::Update(float DeltaTime)
 void CComponent::PostUpdate(float DeltaTime)
 {
 }
-void CComponent::Collsion(float DeltaTime)
+void CComponent::Collision(float DeltaTime)
 {
 }
 void CComponent::PreRender()

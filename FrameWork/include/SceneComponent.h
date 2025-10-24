@@ -16,7 +16,7 @@ protected:
 
 protected:
 	CSceneComponent* mParent = nullptr;
-	std::vector<CSharedPtr<CSceneComponent>> mChildList;
+	vector<CSharedPtr<CSceneComponent>> mChildList;
 
 public:
 	void AddChild(CSceneComponent* Child);
@@ -28,7 +28,7 @@ public:
 	virtual void PreUpdate(float DeltaTime);
 	virtual void Update(float DeltaTime);
 	virtual void PostUpdate(float DeltaTime);
-	virtual void Collsion(float DeltaTime);
+	virtual void Collision(float DeltaTime);
 	virtual void PreRender();
 	virtual void Render();
 	virtual void PostRender();
@@ -39,12 +39,12 @@ public:
 protected:
 	//상대좌표 월드(절대)좌표 
 	//상대 크기 회전 위치 
-	FVector3D mRelativeScale;
+	FVector3D mRelativeScale = FVector3D(1.f, 1.f, 1.f);
 	FVector3D mRelativeRot;
 	FVector3D mRelativePos;
 
 	//월드(절대) 크기 회전 위치 
-	FVector3D mWorldScale;
+	FVector3D mWorldScale = FVector3D(1.f, 1.f, 1.f);
 	FVector3D mWorldRot;
 	FVector3D mWorldPos;
 

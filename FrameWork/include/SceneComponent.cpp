@@ -17,6 +17,11 @@ CSceneComponent::CSceneComponent(CSceneComponent&& Com)
 
 CSceneComponent::~CSceneComponent()
 {
+	size_t Size = mChildList.size();
+	for (size_t i = 0; i < Size; i++)
+	{
+		mChildList[i]->Destroy();
+	}
 }
 
 void CSceneComponent::AddChild(CSceneComponent* Child)
@@ -38,30 +43,203 @@ bool CSceneComponent::Init(const char* FileName)
 void CSceneComponent::PreUpdate(float DeltaTime)
 {
 	CComponent::PreUpdate(DeltaTime);
+
+	vector<CSharedPtr<CSceneComponent>>::iterator iter;
+	vector<CSharedPtr<CSceneComponent>>::iterator iterEnd = mChildList.end();
+
+	for (iter = mChildList.begin(); iter != iterEnd;)
+	{
+		if (!(*iter)->IsActive())
+		{
+			swap(*iter, mChildList.back());
+
+			mChildList.pop_back();
+			iterEnd = mChildList.end();
+			continue;
+		}
+		else if (!(*iter)->IsEnable())
+		{
+			iter++;
+			continue;
+		}
+		(*iter)->PreUpdate(DeltaTime);
+		iter++;
+	}
+
 }
 void CSceneComponent::Update(float DeltaTime)
 {
 	CComponent::Update(DeltaTime);
+
+	vector<CSharedPtr<CSceneComponent>>::iterator iter;
+	vector<CSharedPtr<CSceneComponent>>::iterator iterEnd = mChildList.end();
+
+	for (iter = mChildList.begin(); iter != iterEnd;)
+	{
+		if (!(*iter)->IsActive()) //삭제할 타이밍
+		{
+			//삭제할 컴포넌랑 자료구조의 마지막 요소랑 스왑 해준다. 
+			swap(*iter, mChildList.back());
+
+			mChildList.pop_back();
+			iterEnd = mChildList.end();
+			continue;
+		}
+		else if (!(*iter)->IsEnable())
+		{
+			++iter;
+			continue;
+		}
+
+		(*iter)->Update(DeltaTime);
+		++iter;
+	}
 }
 void CSceneComponent::PostUpdate(float DeltaTime)
 {
 	CComponent::PostUpdate(DeltaTime);
+
+	vector<CSharedPtr<CSceneComponent>>::iterator iter;
+	vector<CSharedPtr<CSceneComponent>>::iterator iterEnd = mChildList.end();
+
+	for (iter = mChildList.begin(); iter != iterEnd;)
+	{
+		if (!(*iter)->IsActive()) //삭제할 타이밍
+		{
+			//삭제할 컴포넌랑 자료구조의 마지막 요소랑 스왑 해준다. 
+			swap(*iter, mChildList.back());
+
+			mChildList.pop_back();
+			iterEnd = mChildList.end();
+			continue;
+		}
+		else if (!(*iter)->IsEnable())
+		{
+			++iter;
+			continue;
+		}
+
+		(*iter)->Update(DeltaTime);
+		++iter;
+	}
 }
-void CSceneComponent::Collsion(float DeltaTime)
+void CSceneComponent::Collision(float DeltaTime)
 {
-	CComponent::Collsion(DeltaTime);
+	CComponent::Collision(DeltaTime);
+
+	vector<CSharedPtr<CSceneComponent>>::iterator iter;
+	vector<CSharedPtr<CSceneComponent>>::iterator iterEnd = mChildList.end();
+
+	for (iter = mChildList.begin(); iter != iterEnd;)
+	{
+		if (!(*iter)->IsActive()) //삭제할 타이밍
+		{
+			//삭제할 컴포넌랑 자료구조의 마지막 요소랑 스왑 해준다. 
+			swap(*iter, mChildList.back());
+
+			mChildList.pop_back();
+			iterEnd = mChildList.end();
+			continue;
+		}
+		else if (!(*iter)->IsEnable())
+		{
+			++iter;
+			continue;
+		}
+
+		(*iter)->Update(DeltaTime);
+		++iter;
+	}
 }
 void CSceneComponent::PreRender()
 {
 	CComponent::PreRender();
+
+	mmatScale.Scaling(mWorldScale);
+	mmatRot.Rotation(mWorldRot);
+	mmatTranslate.Translation(mWorldPos);
+
+	mmatWorld = mmatScale * mmatRot * mmatTranslate;
+
+	vector<CSharedPtr<CSceneComponent>>::iterator iter;
+	vector<CSharedPtr<CSceneComponent>>::iterator iterEnd = mChildList.end();
+
+	for (iter = mChildList.begin(); iter != iterEnd;)
+	{
+		if (!(*iter)->IsActive()) //삭제할 타이밍
+		{
+			//삭제할 컴포넌랑 자료구조의 마지막 요소랑 스왑 해준다. 
+			swap(*iter, mChildList.back());
+
+			mChildList.pop_back();
+			iterEnd = mChildList.end();
+			continue;
+		}
+		else if (!(*iter)->IsEnable())
+		{
+			++iter;
+			continue;
+		}
+
+		(*iter)->PreRender();
+		++iter;
+	}
 }
 void CSceneComponent::Render()
 {
 	CComponent::Render();
+
+	vector<CSharedPtr<CSceneComponent>>::iterator iter;
+	vector<CSharedPtr<CSceneComponent>>::iterator iterEnd = mChildList.end();
+
+	for (iter = mChildList.begin(); iter != iterEnd;)
+	{
+		if (!(*iter)->IsActive()) //삭제할 타이밍
+		{
+			//삭제할 컴포넌랑 자료구조의 마지막 요소랑 스왑 해준다. 
+			swap(*iter, mChildList.back());
+
+			mChildList.pop_back();
+			iterEnd = mChildList.end();
+			continue;
+		}
+		else if (!(*iter)->IsEnable())
+		{
+			++iter;
+			continue;
+		}
+
+		(*iter)->Render();
+		++iter;
+	}
 }
 void CSceneComponent::PostRender()
 {
 	CComponent::PostRender();
+
+	vector<CSharedPtr<CSceneComponent>>::iterator iter;
+	vector<CSharedPtr<CSceneComponent>>::iterator iterEnd = mChildList.end();
+
+	for (iter = mChildList.begin(); iter != iterEnd;)
+	{
+		if (!(*iter)->IsActive()) //삭제할 타이밍
+		{
+			//삭제할 컴포넌랑 자료구조의 마지막 요소랑 스왑 해준다. 
+			swap(*iter, mChildList.back());
+
+			mChildList.pop_back();
+			iterEnd = mChildList.end();
+			continue;
+		}
+		else if (!(*iter)->IsEnable())
+		{
+			++iter;
+			continue;
+		}
+
+		(*iter)->PostRender();
+		++iter;
+	}
 }
 CSceneComponent* CSceneComponent::Clone()
 {
